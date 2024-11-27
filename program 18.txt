@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main()
+{
+    int p,i,n,a[8]={1,2,3,4,5,6,7};
+    printf("enter the inserting position:");
+    scanf("%d",&p);
+    printf("enter the inserting value");
+    scanf("%d",&n);
+    for(i=7;i>p;i--)
+    a[i]=a[i-1];
+    a[p]=n;
+    
+    printf("values after insertion :\n");
+    for(i=0;i<8;i++)
+  { printf("%d\t",a[i]);} 
+}

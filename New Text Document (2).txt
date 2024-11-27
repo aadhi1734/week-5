@@ -1,0 +1,23 @@
+//this program finds minimum, maximum and mean of the array elements.
+#include<stdio.h>
+int main()
+{
+	int array[]={6,4,2,6,5,3,5,67,3};
+	int k=sizeof(array)/sizeof(3);
+	int i,j,m;
+	for(i=0;i<k;i++,m=0)
+	{
+		for(j=i+1;j<k;j++)
+		{
+			if(array[i]<=array[j])
+			{
+				m=array[i]+array[j];
+				array[i]=m-array[i];
+				array[j]=m-array[j];
+			}
+		}
+	}
+    printf("maximum=%d\n",array[0]);
+    printf("minimum=%d\n",array[k-1]);
+	return 0;
+}
